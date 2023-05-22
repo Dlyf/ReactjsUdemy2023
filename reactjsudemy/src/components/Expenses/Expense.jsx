@@ -5,7 +5,9 @@ import './Expense.css';
 
 function Expense(props) {
     return(
+        // card is a component who defined in a UI component
         <Card className='expenses'>
+            {/* ExpenseItem is a component with 3 props(custom attribute html) who defined in an array in app.jsx */}
             <ExpenseItem
             title={props.items[0].title}
             amount={props.items[0].amount}

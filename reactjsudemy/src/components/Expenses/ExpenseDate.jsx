@@ -1,6 +1,7 @@
 import  "./ExpenseDate.css";
 
 function ExpenseDate (props) {
+    // We define here 3 logic programmation js 
     const month = props.date.toLocaleString('en-US', { month: 'long'});
     const day = props.date.toLocaleString('en-US', { day: '2-digit'});
     const year = props.date.getFullYear();

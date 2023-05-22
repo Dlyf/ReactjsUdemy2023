@@ -5,7 +5,7 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 function ExpenseItem(props) {
     // array destructuring : (we import useState from react) a value + a function who change a value to modify, we define in our
-    // useState a props.title by default. 
+    // useState a props.title as initial value.
     const [title, setTitle] = useState(props.title);
 
     // let title = props.title;
