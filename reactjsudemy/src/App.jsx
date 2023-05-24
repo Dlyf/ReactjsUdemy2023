@@ -1,3 +1,6 @@
+import React from 'react';
+
+import NewExpense from './components/NewExpense/NewExpense';
 import Expense from "./components/Expenses/Expense";
 function App() {
   const expenses = [
@@ -31,6 +34,7 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <NewExpense />
       <Expense items={expenses}/>
     </>
   )
