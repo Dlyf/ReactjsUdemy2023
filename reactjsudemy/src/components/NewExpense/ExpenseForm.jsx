@@ -4,21 +4,25 @@ import './ExpenseForm.css'
 
 const ExpenseForm = () => {
 
-    // const [enteredTitle, setEnteredTitle] = useState('');
-    // const [enteredAmount, setEnteredAmount] = useState('');
-    // const [enteredDate, setEnteredDate] = useState('');
-    // method two: 
-    const [userInput, setUserInput] = useState({
-        enteredTitle: '',
-        enteredAmount: '',
-        enteredDate: ''
-    })
+    const [enteredTitle, setEnteredTitle] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState('');
+    const [enteredDate, setEnteredDate] = useState('');
+    // method two: an alternatif to having the three indivual state slices.
+    // const [userInput, setUserInput] = useState({
+    //     enteredTitle: '',
+    //     enteredAmount: '',
+    //     enteredDate: ''
+    // })
 
     const titleChangeHandler = (event) => {
-        setUserInput({
-            ...userInput,
-            enteredTitle: event.target.value,
-        })
+        setEnteredTitle(event.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //     enteredTitle: event.target.value,
+        // })
+        // setUserInput((prevState) => {
+        //     return { ...prevState, enteredTitle: event.target.value};
+        // })
     }
     // document.getElementById('').addEventListener('click', (event) => {
 
@@ -34,17 +38,20 @@ const ExpenseForm = () => {
     // How can you manage more than one State ? We can have multiple States, multiple States slices
     // or state pieces per component
     const amountChangeHandler = (event) => {
-        setUserInput({
-            ...userInput,
-            enteredAmount: event.target.value,
-        })
+        setEnteredAmount(event.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //     enteredAmount: event.target.value,
+        // })
     }
 
     const dateChangeHandle = (event) => {
-        setUserInput({
-            ...userInput,
-            enteredDate: event.target.value,
-        })
+        setEnteredDate(event.target.value);
+
+        // setUserInput({
+        //     ...userInput,
+        //     enteredDate: event.target.value,
+        // })
     }
 
     return <form>
