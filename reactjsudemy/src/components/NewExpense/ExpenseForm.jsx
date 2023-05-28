@@ -63,22 +63,27 @@ const ExpenseForm = () => {
             date: new Date(enteredDate)
         };
 
-        console.log(expenseData)
+        console.log(expenseData);
+        // two-way binding : for inputs we don't just listen to changes, but we can also pass a new
+        // value back into the input. So we can reset or change the input.
+        setEnteredTitle('');
+        setEnteredAmount('');
+        setEnteredDate('');
     }
 
     return <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__controls">
                 <label>Title</label>
-                <input type="text" onChange={titleChangeHandler}/>
+                <input type="text" value={enteredTitle} onChange={titleChangeHandler}/>
             </div>
             <div className="new-expense__controls">
                 <label>Amount</label>
-                <input type="nulber" min="0.01" step="0.01" onChange={amountChangeHandler} />
+                <input type="nulber" value={enteredAmount} min="0.01" step="0.01" onChange={amountChangeHandler} />
             </div>
             <div className="new-expense__controls">
                 <label>Date</label>
-                <input type="date" min="2019-01-01" max="2022-12-31" onChange={dateChangeHandle} />
+                <input type="date" value={enteredDate} min="2019-01-01" max="2022-12-31" onChange={dateChangeHandle} />
             </div>
         </div>
         <div className="new-expense__actions">
