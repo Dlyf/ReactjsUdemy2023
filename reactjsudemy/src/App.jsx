@@ -29,13 +29,18 @@ function App() {
       title: 'CarD insurance',
       amount: 270,
       date: new Date(2021, 2, 28)
-    }
-  ]
+    },
+  ];
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  }
   return (
     <>
       <h1>Vite + React</h1>
-      <NewExpense />
-      <Expense items={expenses}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expense items={expenses} />
     </>
   )
 }
