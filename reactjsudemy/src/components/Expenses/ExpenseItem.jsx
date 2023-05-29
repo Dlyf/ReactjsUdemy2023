@@ -14,14 +14,13 @@ function ExpenseItem(props) {
         // We call here our function of usestate to modify a value
         setTitle("Updated!");
 
-        console.log("Clicked !!!!");
     }
     return (
         <Card className="expense-item">
             {/* self-closing element */}
             <ExpenseDate date={props.date}/>
             <div className="expense-item__description">
-                <h2 className="expense-item h2">{title}</h2>
+                <h2 className="expense-item h2">{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
             {/* we call the function clickHandler without parenthesis */}
