@@ -14,8 +14,15 @@ function Expense(props) {
         <div>
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+                {/* javascript expression */}
+                {props.items.map((expense) => (
+                    <ExpenseItem 
+                        title={expense.title}
+                        amount={expense.amount}
+                        date={expense.date} />
+                ))}
                 {/* ExpenseItem is a component with 3 props(custom attribute html) who defined in an array in app.jsx */}
-                <ExpenseItem
+                {/* <ExpenseItem
                 title={props.items[0].title}
                 amount={props.items[0].amount}
                 date={props.items[0].date}
@@ -34,7 +41,7 @@ function Expense(props) {
                 title={props.items[3].title}
                 amount={props.items[3].amount}
                 date={props.items[3].date}
-                />
+                /> */}
             </Card>
         </div>
         // card is a component who defined in a UI component
